@@ -1,0 +1,26 @@
+def is_prime (n):
+  if (n == 1):
+    return False
+  limit = int (n ** 0.5) + 1
+  div = 2
+  while (div < limit):
+    if (n % div == 0):
+      return False
+    div += 1
+  return True
+def main():
+    number = 2
+    count =0
+    while count < 10002:
+        if is_prime(number):
+            count+=1
+            if count == 10001:
+                break
+            number+=1
+        else:
+            number +=1
+
+
+
+    print(number)
+main()
