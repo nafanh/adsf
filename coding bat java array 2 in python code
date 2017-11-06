@@ -1,0 +1,36 @@
+def fizzArray2(n):
+    a = []
+    for i in range(n):
+        a.append(str(i))
+    return a
+
+def no14(nums):
+    return 1 not in nums or 4 not in nums
+
+def isEverywhere(nums,val):
+    for i in range(len(nums)-1):
+        if nums[i] != val and nums[i+1] != val:
+            return print(False)
+    return print(True)
+    
+def either24(nums):
+    found2 = False
+    found4 = False
+    for i in range(len(nums)-1):
+        if nums[i] == 2 and nums[i+1] == 2:
+            found2 = True
+        elif nums[i] == 4 and nums[i+1] == 4:
+            found4 = True
+    if found2 and found4:
+        return print(False)
+    elif not found2 and not found4:
+        return print(False)
+    else:
+        return print(True)
+    
+def matchUp(nums1,nums2):
+    count = 0
+    for i in range(len(nums1)):
+        if (abs(nums1[i] - nums2[i]) <= 2) and nums1[i] != nums2[i] :
+            count+=1
+    return print(count)
