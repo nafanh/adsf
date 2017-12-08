@@ -45,3 +45,23 @@ def mixString(a,b):
     st+= b[idxB]
     idxB += 1
   return print(st)
+
+def repeatEnd(str,n):
+  st = ''
+  return print(n*str[-n:])
+  
+  
+def repeatFront(str,n):
+  st1 = ''
+  for i in range(n-1,-1,-1):
+    st1 += str[:i+1]
+  return print(st1)
+  
+  
+  def repeatSeparator(word,sep,count):
+  st = ''
+  a = []
+  for i in range(count):
+    a.append(word)
+  st = sep.join(a)
+  return print(st)
