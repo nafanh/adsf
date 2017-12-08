@@ -1,0 +1,47 @@
+def xyzThere(str):
+  a = str.count('xyz')
+  if a>0:
+    for i in range(len(str)-2):
+      if str[i:i+3] == 'xyz' and str[i-1]!= ".":
+        return print(True)
+
+    return print(False)
+  else:
+    return print(False)
+
+
+def bobThere(st):
+  for i in range(len(st)-2):
+    if st[i] == 'b' and st[i+2] == 'b':
+      return print(True)
+  return print(False)
+  
+def xyBalance(str):
+  if 'x' not in str or len(str) == 0:
+    return True
+  if str[len(str)-1] == 'x':
+    return False
+  for i in range(len(str)):
+    if str[i] == 'x' and i < len(str):
+      for j in range(i+1,len(str)):
+        if str[j] == 'y':
+          return True
+  return False
+
+def mixString(a,b):
+  st = ''
+  idxA = 0
+  idxB = 0
+  while idxA < len(a) and idxB < len(b):
+    st+= a[idxA] + b[idxB]
+    idxA += 1
+    idxB += 1
+
+  while idxA < len(a):
+    st += a[idxA]
+    idxA += 1
+
+  while idxB < len(b):
+    st+= b[idxB]
+    idxB += 1
+  return print(st)
